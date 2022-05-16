@@ -1,6 +1,6 @@
 # vite-plugin-markdown-to-component
 
-A plugin based on [vite-plugin-markdown](https://github.com/hmsk/vite-plugin-markdown) & combines [markdown-it-attrs](https://github.com/arve0/markdown-it-attrs) enables you to import a Markdown file as Vue component on your vite project.
+A plugin based on [vite-plugin-markdown](https://github.com/hmsk/vite-plugin-markdown) combines [markdown-it-attrs](https://github.com/arve0/markdown-it-attrs) & [KaTex](https://github.com/KaTeX) enables you to import a Markdown file as Vue component on your vite project.
 
 ![](./GIF.gif)
 
@@ -36,7 +36,7 @@ All the code blocks will be processed by Prismjs.
 
 > `[toc]` syntax is now optional supported as well. You sholud write `[toc]` on top as using this featrue.
 
-> Btw, you can wrap certain blocks by `^^^` syntax (see example belows).
+> Btw, you can wrap certain blocks by `^^^` syntax, and use formula wrapped with `$$` (see example belows).
 
 ```md
 [toc]
@@ -62,6 +62,8 @@ wrapped-block-2
 var c = 1;
 var d = 2;
 ˋˋˋ
+
+$$KaTeX-formula^2$$
 
 ## t2-1
 ### t2-1-1
@@ -93,6 +95,7 @@ output:
   <pre class="c2 language-js" data-c="hello"><code class="language-js" v-pre="true"><span class="token keyword">var</span> c <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
   <span class="token keyword">var</span> d <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span>
   </code></pre>
+  <p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>K</mi><mi>a</mi><mi>T</mi><mi>e</mi><mi>X</mi><mo>−</mo><mi>f</mi><mi>o</mi><mi>r</mi><mi>m</mi><mi>u</mi><mi>l</mi><msup><mi>a</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">KaTeX-formula^2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7667em;vertical-align:-0.0833em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">K</span><span class="mord mathnormal">a</span><span class="mord mathnormal" style="margin-right:0.13889em;">T</span><span class="mord mathnormal">e</span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1.0085em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mord mathnormal" style="margin-right:0.02778em;">or</span><span class="mord mathnormal">m</span><span class="mord mathnormal">u</span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span></p>
   <h2>t2-1</h2>
   <h3>t2-1-1</h3>
 ```

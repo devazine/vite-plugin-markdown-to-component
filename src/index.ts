@@ -16,6 +16,8 @@ export interface PluginOptions {
   leftDelimiter?: boolean
   rightDelimiter?: boolean
   allowedAttributes?: boolean
+  disableKaTeX?: boolean
+  katexOptions?: object
   markdown?: (body: string) => string
   markdownIt?: MarkdownIt | MarkdownIt.Options
 }
