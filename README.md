@@ -41,7 +41,7 @@ All the code blocks will be processed by Prismjs.
 ```md
 [toc]
 # t1
-## t2 {.t2}
+## t1-2 {.t2}
 
 p1
 # t2
@@ -74,7 +74,7 @@ output:
 ```html
   <ul class="toc-container">
     <li class="level-1">t1</li>
-    <li class="level-2">t2</li>
+    <li class="level-2">t1-2</li>
     <li class="level-1">t2</li>
     <li class="level-2">t2-1</li>
     <li class="level-3">t2-1-1</li>
