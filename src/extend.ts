@@ -1,5 +1,6 @@
 import { PluginOptions } from './index'
 import Prism from 'prismjs'
+import 'prismjs/components/prism-swift'
 import he from 'he'
 import katex from 'katex'
 
@@ -38,8 +39,8 @@ const wrapperFormat = (html: string): string => {
 
 const formulaFormat = (html: string, options: PluginOptions): string => {
   html = html.replace(/\$\$(.*?)\$\$/g, (s, formula) => {
-    const opt = options.katexOptions || { throwOnError: false };
-    return katex.renderToString(formula, opt);
+    const opt = options.katexOptions || { throwOnError: false }
+    return katex.renderToString(formula, opt)
   })
 
   return html
