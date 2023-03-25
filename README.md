@@ -100,7 +100,7 @@ output:
   <h3>t2-1-1</h3>
 ```
 
-## Single File Component
+### Single File Component
 
 ```js
 <template>
@@ -123,6 +123,13 @@ export default {
 }
 </script>
 ```
+
+### Others
+
+use \`ˋ\` instead of \`\`\` to present a backquote inner `<code></code>`:
+
+![](./backquote.jpg)
+
 
 ## 3. APIs
 

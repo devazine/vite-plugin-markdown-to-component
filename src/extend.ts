@@ -46,6 +46,12 @@ const formulaFormat = (html: string, options: PluginOptions): string => {
   return html
 }
 
+const formulaBackquote = (html: string): string => {
+  html = html.replace(/<code>ˋ<\/code>/g, '<code>`</code>')
+
+  return html
+}
+
 const decodeEntry = (html: string, options: PluginOptions) => {
   if (!options.disableDecodeEntry) {
     return he.decode(html)
@@ -112,7 +118,7 @@ const codeFormat = (html: string, options: PluginOptions) => {
       return `<pre${classes}><code class="language-${language}">${newCode}</code></pre>`
     })
 
-  return html
+  return formulaBackquote(html)
 }
 
 const replaceHTMLWithCustomizedClass = (options: PluginOptions, tag = '', tagName = '', code = '') => {
